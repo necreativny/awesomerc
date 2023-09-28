@@ -1,0 +1,22 @@
+rofi
+lightdm
+pavucontrol
+xkb-switch
+pamixer
+pactl
+playerctl
+flameshot
+setxkbmap
+picom
+network manager
+network manager applet
+awk
+acpi
+xbacklight
+songrec
+
+python-libretranslate (python-libretranslate-git)
+
+
+  luarocks
+luafilesystem
