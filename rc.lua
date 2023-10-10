@@ -42,6 +42,8 @@ local theme = require('ui.themes.theme')
 naughty.notify({message=tostring(theme.em_scale)})
 
 
+alt = 'Mod1'
+
 terminal = "kitty"
 editor = os.getenv("EDITOR") or "micro"
 editor_cmd = terminal .. " -e " .. editor
@@ -203,7 +205,10 @@ end)
 
 -- }}}
 
+require('ui.wibar')
+
 require('wm.u')
+require('wm.binds')
 
 
 -- {{{ Titlebars

@@ -148,5 +148,7 @@ local theme = {}
 theme.font = "sans 8"
 theme.ui_to_font = 1
 theme.em_scale = theme.ui_to_font*beautiful.get_font_height(theme.font)
+theme.wibar_width = 1
+
 
 return theme
