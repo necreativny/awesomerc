@@ -25,13 +25,13 @@ theme.font = "sans 8"
 
 theme.ui_to_font = 1
 theme.em_scale = theme.ui_to_font*beautiful.get_font_height(theme.font)
-theme.wibar_width = 1
+theme.wibar_width = 4
 
 theme.shape = function(cr, width, height)
-	gears.shape.rounded_rect(cr, width, height, 6)
+	gears.shape.rounded_rect(cr, width, height, 0.5*theme.em_scale)
 end
 
-theme.bg_normal     = "#222222aa"
+theme.bg_normal     = "#222222"..'00'
 theme.bg_focus      = "#535d6c"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
@@ -42,20 +42,21 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap         = dpi(0)
+theme.background = {
+	shape = theme.shape,
+	bg = theme.bg_normal,
+	opacity_hex = '55',
+	margin = 0.15*theme.em_scale,
+	border_color = theme.bg_focus,
+	border_width = 0.1*theme.em_scale,
+}
+
+theme.useless_gap = theme.background.margin
 theme.border_width        = dpi(1)
 theme.border_color_normal = "#000000"
 theme.border_color_active = "#535d6c"
 theme.border_color_marked = "#91231c"
 
-theme.background = {
-	shape = theme.shape,
-	bg = theme.bg_normal,
-	margin = 0.3*theme.em_scale,
-	border_color = theme.bg_focus,
-	border_width = 0.1*theme.em_scale,
-	padding = 0.3*theme.em_scale,
-}
 
 -- There are other variable sets
 -- overriding the default one when
@@ -128,5 +129,3 @@ end)
 
 
 return theme
-
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
