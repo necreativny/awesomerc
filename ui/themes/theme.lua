@@ -25,7 +25,7 @@ theme.font = "sans 8"
 
 theme.ui_to_font = 1
 theme.em_scale = theme.ui_to_font*beautiful.get_font_height(theme.font)
-theme.wibar_width = 4
+theme.wibar_width = 3
 
 theme.shape = function(cr, width, height)
 	gears.shape.rounded_rect(cr, width, height, 0.5*theme.em_scale)
